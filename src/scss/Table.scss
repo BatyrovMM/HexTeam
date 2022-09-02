@@ -1,0 +1,36 @@
+.stat__table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0px auto;
+  font-size: 14px;
+  width: 80%;
+  
+  td {
+    border: 2px solid #222;
+    overflow: hidden;
+    padding: 20px 20px;
+    word-break: normal;
+  }
+
+  th {
+    border: 2px solid #222;
+    overflow: hidden;
+    padding: 20px 20px;
+    word-break: normal;
+  }
+}
+
+.stat__table-head {
+  border-color: inherit;
+  text-align: center;
+  vertical-align: top
+}
+
+.stat__table-body {
+  text-align: left;
+  vertical-align: top;
+}
+
+.stat__table-body_text_center {
+  text-align: center;
+}

@@ -1,11 +1,39 @@
 @import url(./vendor/normalize.css);
 @import url(./fonts/inter/inter.css);
+@import url(./scss/Login.scss);
+@import url(./scss/Footer.scss);
+@import url(./scss/Table.scss);
+@import url(./scss/Stat.scss);
 
-div:focus, button:focus {
-  outline: none;
+* {
+  box-sizing: border-box;
 }
 
-input:focus {
-  outline: none;
-  border-bottom: 1px solid #000000;
+body {
+  background-color: #F1F1F1;
+}
+
+.page {
+  font-family: 'Inter', Arial, sans-serif;
+  position: relative;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+div, button, input, a, label {
+  display: block;
+  text-decoration: none;
+  
+  &:focus {
+    outline: none;
+  }
 }

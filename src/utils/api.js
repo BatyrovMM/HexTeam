@@ -56,7 +56,6 @@ export class Api {
         Accept: "application/json",
         Authorization: `Bearer ${jwt}`
       },
-      method: "POST"
     })
     .then(this._response);
   }
