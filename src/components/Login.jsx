@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import Header from './Header.jsx';
+import { useNavigate, Link } from 'react-router-dom';
 
 function Login({ onLogin, loggedIn }) {
   const navigate = useNavigate();
@@ -28,11 +27,10 @@ function Login({ onLogin, loggedIn }) {
     if (loggedIn) {
       navigate('/main', { replace: true })
     }
-  }, [loggedIn])
+  }, [loggedIn, navigate])
 
   return (
   <>
-    {/* <Header onPage={'login'}/> */}
     <section className="auth">
       <div className="wrapper wrapper_auth">
         <h1 className="auth__title">Авторизация</h1>
@@ -59,6 +57,7 @@ function Login({ onLogin, loggedIn }) {
           </label>
           <button type="submit" className="auth__form-button">Войти</button>
         </form>
+        <p className="auth__change">Ещё не зарегистрированы? <Link to="/sign-up" className="auth__change_link">Регистрация</Link></p>
       </div>
     </section>
   </>

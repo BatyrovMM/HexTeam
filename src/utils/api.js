@@ -1,6 +1,7 @@
 export class Api {
   constructor(options) {
     this.baseUrl = options.baseUrl;
+    this.jwt = options.jwt
   }
 
   _response(res) {
@@ -39,22 +40,22 @@ export class Api {
     .then(this._response);
   }
 
-  squeeze(link, jwt) {
+  squeeze(link) {
     return fetch(`${this.baseUrl}/squeeze?link=${link}`, {
       headers: {
         Accept: "application/json",
-        Authorization: `Bearer ${jwt}`
+        Authorization: `Bearer ${this.jwt}`
       },
       method: "POST"
     })
     .then(this._response);
   }
 
-  statistics(order, offset, limit, jwt) {
+  statistics(order, offset, limit) {
     return fetch(`${this.baseUrl}/statistics?order=${order}&offset=${offset}&limit=${limit}`, {
       headers: {
         Accept: "application/json",
-        Authorization: `Bearer ${jwt}`
+        Authorization: `Bearer ${this.jwt}`
       },
     })
     .then(this._response);
