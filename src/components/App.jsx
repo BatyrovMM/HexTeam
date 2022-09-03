@@ -109,7 +109,7 @@ function App() {
   }
 
   function refreshFunc() {
-    return setRefresh(refresh + 1)
+    return setRefresh(refresh + 2)
   }
 
   function filterSelect(event) {
