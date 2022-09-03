@@ -109,7 +109,7 @@ function App() {
   }
 
   function refreshFunc() {
-    return setRefresh(refresh + 2)
+    return setRefresh(() => refresh + 1)
   }
 
   function filterSelect(event) {
@@ -173,7 +173,7 @@ function App() {
 
   React.useEffect(() => {
     tokenCheck();
-  },[refresh, filterChoice, offset])
+  },[loggedIn, refresh, filterChoice, offset])
 
 
   return (
